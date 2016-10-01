@@ -1617,7 +1617,7 @@
 
             if (self.coordinatorUuid()) {
              self.saveScheduler();
-             //self.refreshSchedulerParameters();        if (notebook.schedulerViewModel != null) {
+             //self.refreshSchedulerParameters();        if (notebook.schedulerViewModel != null) { // todo remove
              self.schedulerViewModel.coordinator.refreshParameters();
             }
 

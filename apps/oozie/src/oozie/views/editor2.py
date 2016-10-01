@@ -335,7 +335,7 @@ def workflow_parameters(request):
       workflow = Workflow(document=workflow_doc, user=request.user)
     else:
       wf_doc = WorkflowBuilder().create_workflow(document=workflow_doc, user=request.user, managed=True)
-      workflow = Workflow(data=wf_doc.data)
+      workflow = Workflow(data=wf_doc.data) # node['parameters'] = [{'value': v} for v in notebook.get_data()['snippets'][0]['variables']]
       print wf_doc.data
       wf_doc.delete()
 
